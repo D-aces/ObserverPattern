@@ -7,19 +7,23 @@ public class Test
 
 	public static void main(String[] args) 
 	{
-<<<<<<< HEAD
 		Store storeList[] = {
 				new Store("Staples", 50),
 				new Store ("Walmart", 20),
 				new Store ("Freshco", 10)
 		};
 		
+		Customer customerList[] = {
+				new Customer("Noah", storeList[2]),
+				new Customer("Ayush", storeList[1]),
+				new Customer("Dmitri", storeList[0])
+		};
 		
-=======
-		ArrayList<Customer> customerList = new ArrayList<Customer>();
-		ArrayList<Store> storeList = new ArrayList<Store>();
-		for(int x = 0; x < 20; x++) 
-			storeList.add(x);
->>>>>>> 7e8b0924aeeb64ff5be8489d04c84247592e042d
+		customerList[0].printRegisteredStores();
+		
+		customerList[0].register(storeList[1]);
+		customerList[0].unregister(storeList[2]);
+		customerList[0].update(30);
+		
 	}
 }
