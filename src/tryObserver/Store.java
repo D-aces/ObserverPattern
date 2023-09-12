@@ -18,7 +18,7 @@ public class Store extends Subject
 	void register(Observer o) 
 	{
 		ol.add(o);
-		System.out.println("Added \'" + o.getName() + "\' to Store " + name);
+		System.out.println("Added \'" + o.getName() + "\' to " + name);
 	}
 
 	void unregister(Observer o)
