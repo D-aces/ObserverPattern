@@ -7,21 +7,21 @@ public class Store extends Subject
 	float discount;
 	String name;
 	ArrayList<Observer>	ol;
-	public Store(String name,float discount) 
+	public Store(String name, float discount) 
 	{
 		this.name = name;
 		this.discount = discount;
 		ol = new ArrayList<Observer>();
 	}
-	@Override
+	
+	
 	void register(Observer o) 
 	{
 		ol.add(o);
 		System.out.println("Added Customer " + o.getName() + " to Store " + name);
 	}
 
-	@Override
-	void unregister(Observer o) 
+	void unregister(Observer o)
 	{
 		try 
 		{
@@ -35,7 +35,6 @@ public class Store extends Subject
 		
 	}
 
-	@Override
 	void notifyObservers() 
 	{
 		for(Observer o : ol)
