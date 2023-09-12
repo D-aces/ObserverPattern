@@ -26,11 +26,11 @@ public class Store extends Subject
 		try 
 		{
 			ol.remove(ol.indexOf(o));	
-			System.out.println("Removed \'" + o.getName() + "\' from store " + name);
+			System.out.println("Removed \'" + o.getName() + "\' from " + name);
 		}
 		catch (NullPointerException e) 
 		{
-			System.out.println("No such Customer named " + o.getName() + " in store " + name);
+			System.out.println("No such Customer named \'" + o.getName() + "\'' in " + name);
 		}
 		
 	}
