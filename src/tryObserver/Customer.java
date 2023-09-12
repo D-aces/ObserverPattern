@@ -30,7 +30,7 @@ public class Customer extends Observer
 		System.out.println(String.format("The discount is now %f%.  Thank you, %s! ", discount, customerName));
 	}
 
-	public void setFavouriteStore(Store favouriteStore) 
+	public void setFavouriteStore(Store favouriteStore)
 	{
 		this.favouriteStore = favouriteStore;
 	}
