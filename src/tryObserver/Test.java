@@ -19,8 +19,6 @@ public class Test
 				new Customer("Dmitri", storeList[0])
 		};
 		
-		customerList[0].printRegisteredStores();
-		
 		customerList[0].register(storeList[1]);
 		customerList[0].unregister(storeList[2]);
 		customerList[0].update(30);
