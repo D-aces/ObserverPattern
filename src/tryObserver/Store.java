@@ -17,7 +17,7 @@ public class Store extends Subject
 	void register(Observer o) 
 	{
 		ol.add(o);
-		System.out.println("Added Customer " + o + " to Store " + name);
+		System.out.println("Added Customer " + o.getName() + " to Store " + name);
 	}
 
 	@Override

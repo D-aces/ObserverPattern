@@ -13,10 +13,10 @@ public class Customer extends Observer
 	private NumberFormat dc = new DecimalFormat("0.00");
 	public Customer(String customerName, Store favouriteStore) 
 	{
-		registeredStores = new ArrayList<Store>();
-		register(favouriteStore);
 		this.customerName = customerName;
 		this.favouriteStore = favouriteStore;
+		registeredStores = new ArrayList<Store>();
+		register(favouriteStore);
 	}
 	
 	public void register(Store newStore) 
@@ -47,6 +47,11 @@ public class Customer extends Observer
 			for(Store s : registeredStores) 
 				System.out.println(s.name);
 		}
+	}
+	
+	public String getName() 
+	{
+		return customerName;
 	}
 	
 	public void setFavouriteStore(Store favouriteStore) 
