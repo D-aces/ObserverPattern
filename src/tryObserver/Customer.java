@@ -19,12 +19,12 @@ public class Customer extends Observer
 	public void register(Store newStore) 
 	{
 		registeredStores.add(newStore);
-		System.out.println(registeredStores.get(0).name);
+		System.out.println("Added Store: " + registeredStores.get(registeredStores.indexOf(newStore)).name);
 	}
 	
 	public void unregister(Store removeStore) 
 	{
-		System.out.println(registeredStores.indexOf(removeStore));
+		System.out.println("Removed Store: " + registeredStores.get(registeredStores.indexOf(removeStore)).name);
 		registeredStores.remove(registeredStores.indexOf(removeStore));
 		
 	}

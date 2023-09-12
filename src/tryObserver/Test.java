@@ -1,6 +1,5 @@
 package tryObserver;
 
-import java.util.ArrayList;
 
 public class Test 
 {
@@ -8,9 +7,9 @@ public class Test
 	public static void main(String[] args) 
 	{
 		Store storeList[] = {
-				new Store("Staples", 50),
+				new Store ("Staples", 50),
 				new Store ("Walmart", 20),
-				new Store ("Freshco", 10)
+				new Store ("FreshCo", 10)
 		};
 		
 		Customer customerList[] = {
@@ -19,7 +18,7 @@ public class Test
 				new Customer("Dmitri", storeList[0])
 		};
 		
-		customerList[0].register(storeList[1]);
+		customerList[0].register(storeList[0]);
 		customerList[0].unregister(storeList[2]);
 		customerList[0].update(30);
 		
