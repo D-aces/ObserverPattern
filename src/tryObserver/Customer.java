@@ -27,7 +27,16 @@ public class Customer extends Observer
 	public void update(float discount) 
 	{
 		this.discount = discount;
-		System.out.println("The discount is now: " + discount + "%. Thank you, " + customerName);
+		System.out.println(String.format("The discount is now %f%.  Thank you, %s! ", discount, customerName));
 	}
-	
+
+	public void setFavouriteStore(Store favouriteStore) 
+	{
+		this.favouriteStore = favouriteStore;
+	}
+
+	public Store getFavoriteStore() 
+	{
+		return this.favouriteStore;
+	}
 }
