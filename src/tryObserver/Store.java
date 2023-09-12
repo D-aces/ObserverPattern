@@ -18,7 +18,7 @@ public class Store extends Subject
 	void register(Observer o) 
 	{
 		ol.add(o);
-		System.out.println("Added \'" + o.getName() + "\'' to Store " + name);
+		System.out.println("Added \'" + o.getName() + "\' to Store " + name);
 	}
 
 	void unregister(Observer o)
@@ -26,7 +26,7 @@ public class Store extends Subject
 		try 
 		{
 			ol.remove(ol.indexOf(o));	
-			System.out.println("Removed \'" + o.getName() + "\'' from store " + name);
+			System.out.println("Removed \'" + o.getName() + "\' from store " + name);
 		}
 		catch (NullPointerException e) 
 		{
