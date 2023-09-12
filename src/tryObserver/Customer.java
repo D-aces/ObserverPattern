@@ -23,12 +23,10 @@ public class Customer extends Observer
 	{
 		registeredStores.add(newStore);
 		registeredStores.get(registeredStores.indexOf(newStore)).register(this);
-		System.out.println("Added Store: " + registeredStores.get(registeredStores.indexOf(newStore)).name);
 	}
 	
 	public void unregister(Store removeStore) 
 	{
-		System.out.println("Removed Store: " + registeredStores.get(registeredStores.indexOf(removeStore)).name);
 		registeredStores.get(registeredStores.indexOf(removeStore)).unregister(this);
 		registeredStores.remove(registeredStores.indexOf(removeStore));
 	}
@@ -40,14 +38,14 @@ public class Customer extends Observer
 		System.out.println("The discount is now " + dc.format(discount) + "% off.  Thank you, " + customerName + "!");
 	}
 
-	public void printRegisteredStores() {
-		if(registeredStores.isEmpty()) {
+	public void printRegisteredStores() 
+	{
+		if(registeredStores.isEmpty()) 
 			System.out.println("Empty");
-		}
-		else {
-		for(Store s : registeredStores) {
-			System.out.println(s.name);
-		}
+		else 
+		{
+			for(Store s : registeredStores) 
+				System.out.println(s.name);
 		}
 	}
 	
