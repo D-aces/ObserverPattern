@@ -11,6 +11,7 @@ public class Customer extends Observer
 	float discount;
 	private ArrayList<Store> registeredStores;
 	private NumberFormat dc = new DecimalFormat("0.00");
+
 	public Customer(String customerName, Store favouriteStore) 
 	{
 		registeredStores = new ArrayList<Store>();
