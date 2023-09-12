@@ -24,13 +24,16 @@ public class Test
 		customerList[0].unregister(storeList[2]);
 		
 		//Update all customers of discount amount 60% on Account of Christmas 
-		System.out.println("\n");
+		System.out.println("\nFor store " + storeList[0].name);
 		storeList[0].setDiscount("Christmas", 60);
+		
+		
 		//For Customer Noah remove store Staples
 		customerList[0].unregister(storeList[0]);
 		//For Customer Ayush add Store Staples
 		customerList[1].register(storeList[0]);
 		//Update all customers of discount 20% on Account of Halloween
+		System.out.println("\nFor store " + storeList[0].name);
 		storeList[0].setDiscount("Halloween", 20);
 	}
 }
