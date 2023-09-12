@@ -17,10 +17,20 @@ public class Test
 				new Customer("Ayush", storeList[1]),
 				new Customer("Dmitri", storeList[0])
 		};
-		
+		//For Customer Noah add store Staples
 		customerList[0].register(storeList[0]);
-		customerList[0].unregister(storeList[2]);
-		customerList[0].update(30);
 		
+		//For Customer Noah remove store FreshCo
+		customerList[0].unregister(storeList[2]);
+		
+		//Update all customers of discount amount 60% on Account of Christmas 
+		System.out.println("\n");
+		storeList[0].setDiscount("Christmas", 60);
+		//For Customer Noah remove store Staples
+		customerList[0].unregister(storeList[0]);
+		//For Customer Ayush add Store Staples
+		customerList[1].register(storeList[0]);
+		//Update all customers of discount 20% on Account of Halloween
+		storeList[0].setDiscount("Halloween", 20);
 	}
 }

@@ -19,20 +19,21 @@ public class Customer extends Observer
 	public void register(Store newStore) 
 	{
 		registeredStores.add(newStore);
+		registeredStores.get(registeredStores.indexOf(newStore)).register(this);
 		System.out.println("Added Store: " + registeredStores.get(registeredStores.indexOf(newStore)).name);
 	}
 	
 	public void unregister(Store removeStore) 
 	{
 		System.out.println("Removed Store: " + registeredStores.get(registeredStores.indexOf(removeStore)).name);
+		registeredStores.get(registeredStores.indexOf(removeStore)).unregister(this);
 		registeredStores.remove(registeredStores.indexOf(removeStore));
-		
 	}
 	
 	public void update(float discount) 
 	{
 		this.discount = discount;
-		System.out.println(String.format("The discount is now %f.  Thank you, %s! ", discount, customerName));
+		System.out.println(String.format("The discount is now %f%%. Thank you, %s! ", discount, customerName));
 	}
 
 	public void printRegisteredStores() {
