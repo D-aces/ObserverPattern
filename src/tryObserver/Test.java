@@ -10,6 +10,6 @@ public class Test
 		ArrayList<Customer> customerList = new ArrayList<Customer>();
 		ArrayList<Store> storeList = new ArrayList<Store>();
 		for(int x = 0; x < 20; x++) 
-			storeList.add();
+			storeList.add(x);
 	}
 }
