@@ -1,6 +1,8 @@
 package tryObserver;
 
 import java.util.ArrayList;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 
 public class Customer extends Observer
 {
@@ -8,6 +10,7 @@ public class Customer extends Observer
 	private Store favouriteStore;
 	float discount;
 	private ArrayList<Store> registeredStores;
+	private NumberFormat dc = new DecimalFormat("0.00");
 	public Customer(String customerName, Store favouriteStore) 
 	{
 		registeredStores = new ArrayList<Store>();
@@ -33,7 +36,8 @@ public class Customer extends Observer
 	public void update(float discount) 
 	{
 		this.discount = discount;
-		System.out.println(String.format("The discount is now %f%%. Thank you, %s! ", discount, customerName));
+
+		System.out.println("The discount is now " + dc.format(discount) + "% off.  Thank you, " + customerName + "!");
 	}
 
 	public void printRegisteredStores() {
