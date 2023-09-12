@@ -30,7 +30,6 @@ public class Store extends Subject
 		}
 		catch (NullPointerException e) 
 		{
-			// TODO: handle exception
 			System.out.println("No such Customer called "+o+" in store "+name);
 		}
 		
