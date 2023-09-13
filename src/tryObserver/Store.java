@@ -7,7 +7,7 @@ public class Store extends Subject
 	float discount;
 	String name;
 	ArrayList<Observer>	ol;
-	public Store(String name, float discount) 
+	public Store(String name, float discount)
 	{
 		this.name = name;
 		this.discount = discount;

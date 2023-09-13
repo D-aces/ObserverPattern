@@ -5,9 +5,9 @@ public class Test
 	{
 		Store storeList[] = 
 		{
-				new Store ("Staples", 50),
-				new Store ("Walmart", 20),
-				new Store ("FreshCo", 10)
+				new Store("Staples", 50),
+				new Store("Walmart", 20),
+				new Store("FreshCo", 10)
 		};
 		
 		Customer customerList[] = 
