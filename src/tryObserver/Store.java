@@ -14,8 +14,7 @@ public class Store extends Subject
 		ol = new ArrayList<Observer>();
 	}
 	
-	
-	void register(Observer o) 
+	void register(Observer o)
 	{
 		ol.add(o);
 		System.out.println("Added \'" + o.getName() + "\' to " + name);
@@ -35,11 +34,10 @@ public class Store extends Subject
 		
 	}
 
-	void notifyObservers() 
+	void notifyObservers()
 	{
 		for(Observer o : ol)
 			o.update(discount);
-
 	}
 	
 	void setDiscount(String festival, float d) 
