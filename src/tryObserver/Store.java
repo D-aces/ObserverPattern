@@ -17,7 +17,7 @@ public class Store extends Subject
 	void register(Observer o)
 	{
 		ol.add(o);
-		System.out.println("Added \'" + o.getName() + "\' to " + name);
+		System.out.println("\nAdded \'" + o.getName() + "\' to " + name);
 	}
 
 	void unregister(Observer o)
@@ -25,13 +25,12 @@ public class Store extends Subject
 		try 
 		{
 			ol.remove(ol.indexOf(o));	
-			System.out.println("Removed \'" + o.getName() + "\' from " + name);
+			System.out.println("\nRemoved \'" + o.getName() + "\' from " + name);
 		}
 		catch (NullPointerException e) 
 		{
-			System.out.println("No such Customer named \'" + o.getName() + "\'' in " + name);
+			System.out.println("\nNo such Customer named \'" + o.getName() + "\'' in " + name);
 		}
-		
 	}
 
 	void notifyObservers()
@@ -42,9 +41,9 @@ public class Store extends Subject
 	
 	void setDiscount(String festival, float d) 
 	{
-		discount=d;
+		discount = d;
 		System.out.println("\nSALE ALERT for " + name + "!");
-		System.out.println("New Discount Offer on Account of " + festival);
+		System.out.println("Discount Offer for " + festival + "!");
 		notifyObservers();
 	}
 }
